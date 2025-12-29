@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-guide-site/static/css/main.6ec686aa.css",
-    "main.js": "/react-guide-site/static/js/main.b5229d4f.js",
-    "static/js/453.ef2928e0.chunk.js": "/react-guide-site/static/js/453.ef2928e0.chunk.js",
-    "index.html": "/react-guide-site/index.html",
-    "main.6ec686aa.css.map": "/react-guide-site/static/css/main.6ec686aa.css.map",
-    "main.b5229d4f.js.map": "/react-guide-site/static/js/main.b5229d4f.js.map",
-    "453.ef2928e0.chunk.js.map": "/react-guide-site/static/js/453.ef2928e0.chunk.js.map"
+    "main.css": "/epyon-guide/static/css/main.6ec686aa.css",
+    "main.js": "/epyon-guide/static/js/main.226f32c4.js",
+    "static/js/453.ef2928e0.chunk.js": "/epyon-guide/static/js/453.ef2928e0.chunk.js",
+    "index.html": "/epyon-guide/index.html",
+    "main.6ec686aa.css.map": "/epyon-guide/static/css/main.6ec686aa.css.map",
+    "main.226f32c4.js.map": "/epyon-guide/static/js/main.226f32c4.js.map",
+    "453.ef2928e0.chunk.js.map": "/epyon-guide/static/js/453.ef2928e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ec686aa.css",
-    "static/js/main.b5229d4f.js"
+    "static/js/main.226f32c4.js"
   ]
 }
