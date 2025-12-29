@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-guide-site/static/css/main.6ec686aa.css",
+    "main.js": "/react-guide-site/static/js/main.b5229d4f.js",
+    "static/js/453.ef2928e0.chunk.js": "/react-guide-site/static/js/453.ef2928e0.chunk.js",
+    "index.html": "/react-guide-site/index.html",
+    "main.6ec686aa.css.map": "/react-guide-site/static/css/main.6ec686aa.css.map",
+    "main.b5229d4f.js.map": "/react-guide-site/static/js/main.b5229d4f.js.map",
+    "453.ef2928e0.chunk.js.map": "/react-guide-site/static/js/453.ef2928e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ec686aa.css",
+    "static/js/main.b5229d4f.js"
+  ]
+}
