@@ -55,23 +55,26 @@ function App() {
     }
   };
 
-  // 데이터를 불러오면서 각 행의 '진짜 번호(Index)'를 기록합니다.
-  const loadData = () => {
+const loadData = () => {
     setLoading(true);
-    fetch(API_URL)
+
+    // 1. 캐시 방지를 위해 URL 뒤에 현재 시간(타임스탬프)을 붙입니다.
+    const cacheBuster = `?t=${new Date().getTime()}`;
+
+    fetch(API_URL + cacheBuster)
       .then((res) => res.json())
       .then((json) => {
+        // 2. 기존의 데이터 정제 로직 (공백 제거 및 인덱스 부여)
         const cleanedData = json.map((item, index) => {
           const newItem = {};
-          // 시트 헤더의 공백 제거 및 데이터 매칭
           Object.keys(item).forEach(key => {
             newItem[key.trim()] = item[key];
           });
-          // 중요: Apps Script에서 가져온 순서대로 인덱스 부여 (헤더 제외 첫 데이터가 1번 행)
           newItem.originalIndex = index; 
           return newItem;
         });
-        // 방어1 컬럼이 있는 데이터만 필터링
+
+        // 3. 방어1 컬럼이 있는 데이터만 필터링하여 상태 업데이트
         setAllData(cleanedData.filter(item => item["방어1"]));
         setLoading(false);
       })
@@ -80,7 +83,7 @@ function App() {
         setLoading(false);
       });
   };
-
+  
   // 승률 계산 함수
   const calculateWinRate = (win, loss) => {
     const w = Number(win) || 0;
