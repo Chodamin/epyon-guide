@@ -1,0 +1,299 @@
+/* App.css */
+
+/* 1. 전체 레이아웃 */
+.container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f4f7f9;
+  min-height: 100vh;
+}
+
+/* 2. 네비게이션 바 */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.navbar button {
+  padding: 12px 25px;
+  border: none;
+  background: #e1e8ed;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar button.active {
+  background: #3498db;
+  color: white;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* 3. 헤더 */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* 4. 검색창 영역 */
+.search-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.input-field {
+  padding: 12px 15px;
+  border: 2px solid #edf2f7;
+  border-radius: 10px;
+  width: 180px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-button {
+  padding: 12px 30px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 5. 카드 그리드 및 개별 카드 */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.card {
+  position: relative; /* ★ 배지 위치의 기준점이 됩니다 */
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #e1e8ed;
+  width: calc((100% - 40px) / 3); 
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 6. 카드 내부 요소 및 승률 배지 */
+.win-rate-badge {
+  position: absolute; /* .card를 기준으로 배치됩니다 */
+  top: 12px;
+  right: 12px;
+  background: #2ecc71;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.row-info {
+  margin-bottom: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.badge {
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  margin-right: 10px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.badge-red { background: #ff6b6b; }
+.badge-green { background: #51cf66; }
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.comment-box {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #fff9db;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #fab005;
+}
+
+/* 7. 승패 투표 버튼 */
+.vote-container {
+  display: flex;
+  gap: 10px;
+  padding: 0 15px 15px;
+}
+
+.vote-btn {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: opacity 0.2s;
+}
+
+.vote-btn.win { background: #e8f5e9; color: #2e7d32; }
+.vote-btn.loss { background: #ffebee; color: #c62828; }
+
+.card-footer {
+  padding: 10px 15px;
+  font-size: 11px;
+  color: #95a5a6;
+  text-align: right;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 8. 업로드 폼 (디자인 통일 수정) */
+.upload-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+/* 작성자, 방어, 공격, 스킬 입력창 스타일 통일 */
+.form-group input, 
+.form-section input, 
+.skill-inputs input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* 패딩 오차 방지 */
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.form-group input:focus, 
+.form-section input:focus,
+textarea:focus {
+  border-color: #3498db;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.skill-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.upload-button {
+  width: 100%;
+  padding: 18px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f9;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+}
+
+/* 9. 반응형 */
+@media (max-width: 1024px) {
+  .card { width: calc((100% - 20px) / 2); }
+}
+
+@media (max-width: 650px) {
+  .card { width: 100%; }
+  .form-grid { grid-template-columns: 1fr; }
+}
