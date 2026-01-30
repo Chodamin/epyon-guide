@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/epyon-guide/static/css/main.62c3b986.css",
-    "main.js": "/epyon-guide/static/js/main.3534ba33.js",
+    "main.css": "/epyon-guide/static/css/main.4d790c07.css",
+    "main.js": "/epyon-guide/static/js/main.9dcf3193.js",
     "static/js/453.ef2928e0.chunk.js": "/epyon-guide/static/js/453.ef2928e0.chunk.js",
     "index.html": "/epyon-guide/index.html",
-    "main.62c3b986.css.map": "/epyon-guide/static/css/main.62c3b986.css.map",
-    "main.3534ba33.js.map": "/epyon-guide/static/js/main.3534ba33.js.map",
+    "main.4d790c07.css.map": "/epyon-guide/static/css/main.4d790c07.css.map",
+    "main.9dcf3193.js.map": "/epyon-guide/static/js/main.9dcf3193.js.map",
     "453.ef2928e0.chunk.js.map": "/epyon-guide/static/js/453.ef2928e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62c3b986.css",
-    "static/js/main.3534ba33.js"
+    "static/css/main.4d790c07.css",
+    "static/js/main.9dcf3193.js"
   ]
 }
